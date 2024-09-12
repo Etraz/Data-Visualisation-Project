@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenu.AboutProject">
-   <Button fx:id="toMainMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleToMainMenuButtonPressed" text="Go Back To Main Menu" />
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenu.AboutProject">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="toMainMenuButton" mnemonicParsing="false" onAction="#handleToMainMenuButtonPressed" text="Go Back To Main Menu">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TextArea fx:id="myText" editable="false" prefHeight="189.0" prefWidth="600.0" text="Data-Visualisation-Project&#10;Already made functionalities:&#10;- autocomplete text fields&#10;- parsing data from .csv file (possibility to change automatically found delimiter)&#10;- automatic deletion of useless columns in csv file while parsing&#10;- creating chart from Uploaded data&#10;- adding multiple Y-series&#10;- changing color and visibility of Y-series&#10;- saving charts&#10;- possibility to change working directory&#10; - dark/light mode&#10;Authors:&#10;- Maja Kwiatek (33%)&#10;- Mikołaj Kot (33%)&#10;- Beniamin Śniegowski (33%)" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
